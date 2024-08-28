@@ -1,5 +1,5 @@
 # MEMS-PN
-Phase noise and frequency noise extraction and analysis tools for MEMS systems
+Phase noise and frequency noise extraction and analysis tool for MEMS systems
 
 ## Background
 
@@ -7,11 +7,11 @@ MEMS-PN is an application designed to extract and analyse phase and frequency no
 
 - The application offers a more efficient alternative to traditional transient simulations with Simulink model for extracting the phase noise of the MEMS system.
 
-- The parameters in the model used for this application can be adjusted to accommodate different circuit configurations.
+- The parameters in the model used for this application can be adjusted to accommodate different circuit.
 
-The application contains the MEMS system architecture shown below.
+The application contains the MEMS system architecture shown below. It consists of 4 modules, namely MEMS resonator, TIA, active loop filter and PGA. The system includes 6 noise source inputs and 3 signal source outputs.
 
-<img src="https://github.com/refuliar/ImageBed/blob/main/MEMS-PN/System.png" alt="model"  />
+<img src="https://github.com/refuliar/ImageBed/blob/main/MEMS-PN/System.png" alt="model"/>
 
 ## Installation
 
@@ -27,14 +27,22 @@ Once you have installed and run the application, you can see the following inter
 
 ![图片1](https://github.com/refuliar/ImageBed/blob/main/MEMS-PN/MainInterface.png)
 
+On the left hand side, you can set the parameters of the system and carry out system stability analysis, calibration with low-order model transient simulation and phase noise extraction analysis.
+
+On the right hand side, you can visualise the system structure and see the description of the parameters.
+
+Mechanical parameters are responsible for describing the mechanical performance of the MEMS resonant.
+
 |   Parameter   |     Units      |                 Interpretation                 |
 | :-----------: | :------------: | :--------------------------------------------: |
 |    `Q_d`      |      \         |         Quality factor                         |
 |    `m_d`      |      kg        |         Resonator equivalent mass              |
 |    `Omega_d`  |      rad/s     |         Intrinsic frequency                    |
-|    `k_d`      |      \         |         Zero-order stiffness                   |
-|    `c_d`      |      \         |         Damping coefficient                    |
+|    `k_d`      |      \         |   Zero-order stiffness (=m_d*Omega_d^2)        |
+|    `c_d`      |      \         |   Damping coefficient  (=m_d*Omega_d/Q_d)      |
 |    `k2`       |      \         |   2nd-order stiffness (typical value = 1000)   |
+
+Electric parameters are responsible for describing the performance of the MEMS resonant.
 
 |   Parameter   |     Units      |                 Interpretation                 |
 | :-----------: | :------------: | :--------------------------------------------: |
