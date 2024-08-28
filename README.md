@@ -71,7 +71,12 @@ Electric parameters are responsible for describing the specific details of each 
 
 The process of running the system is shown below.
 
-After completing the parameter inputs, the system stability analysis was first performed. Based on the results of the zero-pole analysis and the signal envelopes of the low-order system transient simulation, it is determined whether the system can oscillate stably or not. And you can further confirm the stability of the system by viewing the oscillating waveforms in a full transient simulation of the low-order model. You can then set upper and lower bounds on the frequency to extract and analyse the phase noise of the system. The application supports interconversion between phase and frequency noise, and can query the frequency noise as well as calculate the total in-band noise.
+After completing the parameter inputs, the system stability analysis was first performed.
+Based on the results of the zero-pole analysis and the signal envelopes of the low-order system transient simulation, it is determined whether the system can oscillate stably or not.
+And you can further confirm the stability of the system by viewing the oscillating waveforms in a full transient simulation of the low-order model. The process automatically analyses the specific values of the RC filter.
+
+You can then set upper and lower bounds on the frequency to extract and analyse the phase noise of the system.
+The application supports interconversion between phase and frequency noise, and can query the frequency noise as well as calculate the total in-band noise.
 
 ![图片2](https://github.com/refuliar/ImageBed/blob/main/MEMS-PN/Process.gif)
 
