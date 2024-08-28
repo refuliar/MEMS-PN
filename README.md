@@ -42,7 +42,7 @@ Mechanical parameters are responsible for describing the mechanical performance 
 |    `c_d`      |      \         |   Damping coefficient  (=m_d*Omega_d/Q_d)      |
 |    `k2`       |      \         |   2nd-order stiffness (typical value = 1000)   |
 
-Electric parameters are responsible for describing the performance of the MEMS resonant.
+Electric parameters are responsible for describing the specific details of each module.
 
 |   Parameter   |     Units      |                 Interpretation                 |
 | :-----------: | :------------: | :--------------------------------------------: |
@@ -57,6 +57,17 @@ Electric parameters are responsible for describing the performance of the MEMS r
 |    `K_gm`     |      \         |         Active Loop Filter Gm                  |
 |    `K_mul`    |      \         |         Gain of the mul                        |
 |    `V_dd`     |      V         |         Supply Voltage                         |
+
+"Equivalent Input Noise" corresponds to 6 different noise sources, supports flicker noise and white noise mixing inputs.
+
+|   Parameter   |     Units      |                 Interpretation                 |
+| :-----------: | :------------: | :--------------------------------------------: |
+|  `Mechanial`  |  N/sqrt(Hz)    |     mechanical input noise                     |
+|  `Front-end`  |  A/sqrt(Hz)    |     front-end input noise                      |
+|  `PGA`        |  V/sqrt(Hz)    |     PGA output noise                           |
+|  `Rectifier`  |  V/sqrt(Hz)    |     rectifier output & subtracter input noise  |
+|  `PI quantify`|  V/sqrt(Hz)    |     PI output quantization noise               |
+|  `Reference`  |  V/sqrt(Hz)    |     reference source noise                     |
 
 ## Maintainers
 
