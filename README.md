@@ -33,7 +33,7 @@ On the right hand side, you can visualise the system structure and see the descr
 
 Mechanical parameters are responsible for describing the mechanical performance of the MEMS resonant.
 
-|   Parameter   |     Units      |                 Interpretation                 |
+|   Parameter   |     Units      |                 Description                    |
 | :-----------: | :------------: | :--------------------------------------------: |
 |    `Q_d`      |      \         |         Quality factor                         |
 |    `m_d`      |      kg        |         Resonator equivalent mass              |
@@ -44,7 +44,7 @@ Mechanical parameters are responsible for describing the mechanical performance 
 
 Electric parameters are responsible for describing the specific details of each module.
 
-|   Parameter   |     Units      |                 Interpretation                 |
+|   Parameter   |     Units      |                 Description                    |
 | :-----------: | :------------: | :--------------------------------------------: |
 |    `K_bd`     |      V         |         Drive bias voltage                     |
 |    `K_bs`     |      V         |         Sense bias voltage                     |
@@ -60,7 +60,7 @@ Electric parameters are responsible for describing the specific details of each 
 
 "Equivalent Input Noise" corresponds to 6 different noise sources, supports flicker noise and white noise mixing inputs.
 
-|   Parameter   |     Units      |                 Interpretation                 |
+|   Parameter   |     Units      |                Description                     |
 | :-----------: | :------------: | :--------------------------------------------: |
 |  `Mechanial`  |  N/sqrt(Hz)    |     mechanical input noise                     |
 |  `Front-end`  |  A/sqrt(Hz)    |     front-end input noise                      |
@@ -69,13 +69,17 @@ Electric parameters are responsible for describing the specific details of each 
 |  `PI quantify`|  V/sqrt(Hz)    |     PI output quantization noise               |
 |  `Reference`  |  V/sqrt(Hz)    |     reference source noise                     |
 
-The process of running the system is shown below.
+The process of running the application is shown below.
 
-After completing the parameter inputs, the system stability analysis was first performed.
-Based on the results of the zero-pole analysis and the signal envelopes of the low-order system transient simulation, it is determined whether the system can oscillate stably or not.
-And you can further confirm the stability of the system by viewing the oscillating waveforms in a full transient simulation of the low-order model. The process automatically analyses the specific values of the RC filter.
+1. Complete input of system parameters
+2. Run “stability analysis” and “trans. calibration”
+3. Check if the system can stabilise oscillations based on the results
+4. If the system fails to stabilise in step 3, revert back to step 1
+5. Complete input of noise source parameters
+6. Run “PN noise”
 
-You can then set upper and lower bounds on the frequency to extract and analyse the phase noise of the system.
+In the stability analysis, the application will give the zero-pole analysis of the system and the specific values of the RC filter.
+
 The application supports interconversion between phase and frequency noise, and can query the frequency noise as well as calculate the total in-band noise.
 
 ![图片2](https://github.com/refuliar/ImageBed/blob/main/MEMS-PN/Process.gif)
