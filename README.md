@@ -40,7 +40,7 @@ Mechanical parameters are responsible for describing the mechanical performance 
 |    `Omega_d`  |      rad/s     |         Intrinsic frequency                    |
 |    `k_d`      |      \         |   Zero-order stiffness (=m_d*Omega_d^2)        |
 |    `c_d`      |      \         |   Damping coefficient  (=m_d*Omega_d/Q_d)      |
-|    `k2`       |      \         |   2nd-order stiffness (typical value = 1e12)   |
+|    `k2`       |      \         |   2nd-order stiffness (typical value = 1e11)   |
 
 Electric parameters are responsible for describing the specific details of each module.
 
