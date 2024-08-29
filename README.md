@@ -82,7 +82,7 @@ In the stability analysis, the application will give the zero-pole analysis of t
 
 The application supports interconversion between phase and frequency noise, and can query the frequency noise as well as calculate the total in-band noise.
 
-![图片2](https://github.com/refuliar/ImageBed/blob/main/MEMS-PN/Process.gif)
+![图片2](https://github.com/refuliar/ImageBed/blob/main/MEMS-PN/process.gif)
 
 ## Maintainers
 
