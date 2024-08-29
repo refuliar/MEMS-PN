@@ -77,6 +77,7 @@ The process of running the application is shown below.
 4. If the system fails to stabilise in step 3, revert back to step 1
 5. Complete input of noise source parameters
 6. Run “PN noise”
+7. Use "PN/FN" button to switch between phase and frequency noise
 
 In the stability analysis, the application will give the zero-pole analysis of the system and the specific values of the RC filter.
 
