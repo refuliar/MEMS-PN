@@ -27,7 +27,7 @@ Once you have installed and run the application, you can see the following inter
 
 ![图片1](https://github.com/refuliar/ImageBed/blob/main/MEMS-PN/MainInterface.png)
 
-On the left hand side, you can set the parameters of the system and carry out system stability analysis, calibration with low-order model transient simulation and phase noise extraction analysis.
+On the left hand side, you can set the parameters of the system and carry out system stability analysis, calibration with reduced-order model transient simulation and phase noise extraction analysis.
 
 On the right hand side, you can visualise the system structure and see the description of the parameters.
 
@@ -40,7 +40,7 @@ Mechanical parameters are responsible for describing the mechanical performance 
 |    `Omega_d`  |      rad/s     |         Intrinsic frequency                    |
 |    `k_d`      |      \         |   Zero-order stiffness (=m_d*Omega_d^2)        |
 |    `c_d`      |      \         |   Damping coefficient  (=m_d*Omega_d/Q_d)      |
-|    `k2`       |      \         |   2nd-order stiffness (typical value = 1000)   |
+|    `k2`       |      \         |   2nd-order stiffness (typical value = 1e12)   |
 
 Electric parameters are responsible for describing the specific details of each module.
 
@@ -48,26 +48,26 @@ Electric parameters are responsible for describing the specific details of each 
 | :-----------: | :------------: | :--------------------------------------------: |
 |    `K_bd`     |      V         |         Drive bias voltage                     |
 |    `K_bs`     |      V         |         Sense bias voltage                     |
-|    `K_amp`    |      \         |         20M, 40M, 80M transimpedance gain      |
+|    `K_amp`    |      \         |         Transimpedance gain                    |
 |    `K_ref`    |      \         |         Reference Voltage                      |
 |    `K_cd`     |      F/m       |         dC/dx-drive                            |
 |    `K_cs`     |      F/m       |         dC/dx-sense                            |
 |    `Km`       |     m/s/N      |  Mechanical gain, from drive force to velocity |
-|    `Wc`       |      \         |         Low-order System pole coefficient      |
-|    `K_gm`     |      \         |         Active Loop Filter Gm                  |
-|    `K_mul`    |      \         |         Gain of the mul                        |
+|    `Wc`       |      \         |         Reduced-order System pole              |
+|    `K_gm`     |      \         |  Transconductance of Active Loop Filter        |
+|    `K_mul`    |      \         |         Gain of the VGA                        |
 |    `V_dd`     |      V         |         Supply Voltage                         |
 
 "Equivalent Input Noise" corresponds to 6 different noise sources, supports flicker noise and white noise mixing inputs.
 
 |   Parameter   |     Units      |                Description                     |
 | :-----------: | :------------: | :--------------------------------------------: |
-|  `Mechanial`  |  N/sqrt(Hz)    |     mechanical input noise                     |
-|  `Front-end`  |  A/sqrt(Hz)    |     front-end input noise                      |
-|  `PGA`        |  V/sqrt(Hz)    |     PGA output noise                           |
-|  `Rectifier`  |  V/sqrt(Hz)    |     rectifier output & subtracter input noise  |
-|  `PI quantify`|  V/sqrt(Hz)    |     PI output quantization noise               |
-|  `Reference`  |  V/sqrt(Hz)    |     reference source noise                     |
+|     `N1`      |  N/sqrt(Hz)    |     Mechanical Input Ramdom Force              |
+|     `N2`      |  A/sqrt(Hz)    |     Input-referred Current Noise of TIA        |
+|     `N3`      |  V/sqrt(Hz)    |     Output Voltage Noise of PGA                |
+|     `N4`      |  V/sqrt(Hz)    | Output Voltage Noise of Rectifier & Subtractor |
+|     `N5`      |  V/sqrt(Hz)    |     Quantization Gain Noise                    |
+|     `N6`      |  V/sqrt(Hz)    |     Reference Voltage Noise                    |
 
 The process of running the application is shown below.
 
