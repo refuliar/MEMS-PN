@@ -62,7 +62,7 @@ Electric parameters are responsible for describing the specific details of each 
 
 |   Parameter   |     Units      |                Description                     |
 | :-----------: | :------------: | :--------------------------------------------: |
-|     `N1`      |  N/sqrt(Hz)    |     Mechanical Input Ramdom Force              |
+|     `N1`      |  N/sqrt(Hz)    |     Mechanical Input Random Force              |
 |     `N2`      |  A/sqrt(Hz)    |     Input-referred Current Noise of TIA        |
 |     `N3`      |  V/sqrt(Hz)    |     Output Voltage Noise of PGA                |
 |     `N4`      |  V/sqrt(Hz)    | Output Voltage Noise of Rectifier & Subtractor |
