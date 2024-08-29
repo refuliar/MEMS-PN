@@ -25,7 +25,7 @@ Please ensure that you have installed [SIMULINK](https://ww2.mathworks.cn/produc
 
 Once you have installed and run the application, you can see the following interface.
 
-![图片1](https://github.com/refuliar/ImageBed/blob/main/MEMS-PN/MainInterface.png)
+![图片1](https://github.com/refuliar/ImageBed/blob/main/MEMS-PN/main.png)
 
 On the left hand side, you can set the parameters of the system and carry out system stability analysis, calibration with reduced-order model transient simulation and phase noise extraction analysis.
 
